@@ -1,15 +1,15 @@
 # ExpenseAnalyzer
 
-Analyze expense data to provide spending insights and generate summary reports.
+An expense analyzer that reads expenses and generates a summary report.
 
 ## Goal
-Analyze expense data to provide spending insights and generate summary reports.
+Create an expense analyzer that reads expenses and generates a summary report.
 
 ## Acceptance Criteria
 1. `expense_analyzer` module exists and can be imported.
-2. `analyze_trends` function returns a dict of spending trends over time.
-3. `generate_summary` function returns a formatted string summary.
-4. `get_top_categories` function returns a list of top spending categories.
+2. `analyze_expenses` function takes a list of expenses and returns a summary dict.
+3. `generate_report` function writes a summary report to a file.
+4. `get_trending_categories` returns the top 3 categories by spending.
 
 ## Status
 ACTIVE
