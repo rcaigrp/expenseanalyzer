@@ -1,0 +1,12 @@
+{
+  "goal": "Analyze past expenses and generate summary reports.",
+  "acceptance_criteria": [
+    "expense_analyzer module exists and can be imported",
+    "load_expenses function reads expenses from a JSON file",
+    "generate_summary returns a dict with total, average, and category breakdown",
+    "export_report writes a formatted text report to a file"
+  ],
+  "meeting_budget": 4,
+  "meetings_held": 0,
+  "status": "active"
+}
