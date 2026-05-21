@@ -12,7 +12,11 @@ Analyze spending trends and generate reports.
 4. `filter_by_category` function filters expenses by category.
 
 ## Status
-ACTIVE
+ACTIVE (Meeting 2/4)
+
+## Completed Work
+- Implemented `analyzer.py` with core logic.
+- Created `acceptance_tests.py` covering all 4 criteria.
 
 ## Next Steps
-Implement `analyzer.py` and write `acceptance_tests.py`.
+Run acceptance tests to validate implementation. Proceed to sprint 2 upon success.
