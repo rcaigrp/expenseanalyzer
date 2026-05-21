@@ -12,9 +12,13 @@ Analyze spending trends and generate reports.
 4. `filter_by_category` function filters expenses by category.
 
 ## Status
-CLOSED (Sprint Complete)
+COMPLETE (Sprint Closed)
 
 ## Completed Work
 - Implemented `analyzer.py` with core logic.
 - Created `acceptance_tests.py` covering all 4 criteria.
 - All acceptance criteria validated and passing.
+- Sprint budget exhausted; all criteria met. Project closed.
+
+## Next Steps
+No further meetings required. Project is archived.
