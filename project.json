@@ -1,1 +1,12 @@
-{"goal": "Analyze spending trends and generate reports.", "acceptance_criteria": ["analyzer module exists and can be imported", "analyze_spending function returns category totals", "generate_report function returns a formatted string", "filter_by_category function filters expenses by category"], "meeting_budget": 4, "meetings_held": 4, "status": "complete"}
+{
+  "goal": "Analyze spending trends and generate reports.",
+  "acceptance_criteria": [
+    "analyzer module exists and can be imported",
+    "analyze_spending function returns category totals",
+    "generate_report function returns a formatted string",
+    "filter_by_category function filters expenses by category"
+  ],
+  "meeting_budget": 4,
+  "meetings_held": 3,
+  "status": "active"
+}

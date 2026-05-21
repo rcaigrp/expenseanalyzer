@@ -1,15 +1,23 @@
-def analyze_spending(expenses):
-    totals = {}
-    for exp in expenses:
-        cat = exp['category']
-        totals[cat] = totals.get(cat, 0) + exp['amount']
-    return totals
+class ExpenseAnalyzer:
+    def __init__(self, expenses=None):
+        self.expenses = expenses or []
 
-def generate_report(totals):
-    lines = ["Expense Report:"]
-    for cat, total in sorted(totals.items()):
-        lines.append(f"- {cat}: ${total:.2f}")
-    return "\n".join(lines)
+    def analyze_spending(self):
+        totals = {}
+        for exp in self.expenses:
+            cat = exp.get('category')
+            amt = exp.get('amount', 0)
+            totals[cat] = totals.get(cat, 0) + amt
+        return totals
 
-def filter_by_category(expenses, category):
-    return [exp for exp in expenses if exp['category'] == category]
+    def generate_report(self):
+        totals = self.analyze_spending()
+        if not totals:
+            return "No expenses recorded."
+        lines = ["Expense Report:"]
+        for cat, total in totals.items():
+            lines.append(f"  {cat}: ${total:.2f}")
+        return "\n".join(lines)
+
+    def filter_by_category(self, category):
+        return [e for e in self.expenses if e.get('category') == category]
