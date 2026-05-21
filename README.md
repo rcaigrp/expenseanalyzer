@@ -1,18 +1,18 @@
 # ExpenseAnalyzer
 
-Analyzes past expenses and generates summary reports.
+Analyzes expenses from the tracker and generates insights.
 
 ## Goal
-Analyze past expenses and generate summary reports.
+Analyze expenses from the tracker and generate insights.
 
 ## Acceptance Criteria
 1. `expense_analyzer` module exists and can be imported.
-2. `load_expenses` function reads expenses from a JSON file.
-3. `generate_summary` returns a dict with total, average, and category breakdown.
-4. `export_report` writes a formatted text report to a file.
+2. `generate_insights` returns a dict of spending patterns.
+3. `detect_anomalies` returns list of unusual expenses.
+4. `report_generation` creates a summary string.
 
 ## Status
 ACTIVE
 
 ## Next Steps
-Implement `expense_analyzer.py` and write `acceptance_tests.py`.
+Implement `expense_analyzer.py` with core functions and write `acceptance_tests.py`.

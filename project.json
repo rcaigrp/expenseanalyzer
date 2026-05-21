@@ -1,10 +1,10 @@
 {
-  "goal": "Analyze past expenses and generate summary reports.",
+  "goal": "Analyze expenses from the tracker and generate insights.",
   "acceptance_criteria": [
     "expense_analyzer module exists and can be imported",
-    "load_expenses function reads expenses from a JSON file",
-    "generate_summary returns a dict with total, average, and category breakdown",
-    "export_report writes a formatted text report to a file"
+    "generate_insights returns a dict of spending patterns",
+    "detect_anomalies returns list of unusual expenses",
+    "report_generation creates a summary string"
   ],
   "meeting_budget": 4,
   "meetings_held": 0,
