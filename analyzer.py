@@ -1,34 +1,26 @@
-def analyze_spending_trends(data):
-    trends = {}
-    for expense in data:
-        date = expense.get('date', '')
-        month = date[:7] if len(date) >= 7 else 'Unknown'
-        amount = float(expense.get('amount', 0))
-        trends[month] = trends.get(month, 0) + amount
-    return trends
+class ExpenseAnalyzer:
+    def __init__(self, expenses):
+        self.expenses = expenses
 
-def generate_report(data):
-    total = 0
-    categories = {}
-    for expense in data:
-        amount = float(expense.get('amount', 0))
-        category = expense.get('category', 'Other')
-        total += amount
-        categories[category] = categories.get(category, 0) + 1
-    
-    report = f"Total Spent: ${total:.2f}\n"
-    report += f"Total Transactions: {len(data)}\n"
-    report += "Breakdown:\n"
-    for cat, count in sorted(categories.items()):
-        report += f"  {cat}: {count} expenses\n"
-    return report
+    def analyze_spending(self):
+        spending = {}
+        for exp in self.expenses:
+            cat = exp.get('category')
+            amt = exp.get('amount')
+            if cat in spending:
+                spending[cat] += amt
+            else:
+                spending[cat] = amt
+        return spending
 
-def get_top_categories(data, n=5):
-    categories = {}
-    for expense in data:
-        category = expense.get('category', 'Other')
-        amount = float(expense.get('amount', 0))
-        categories[category] = categories.get(category, 0) + amount
-    
-    sorted_categories = sorted(categories.items(), key=lambda x: x[1], reverse=True)
-    return [cat for cat, amount in sorted_categories[:n]]
+    def generate_report(self):
+        spending = self.analyze_spending()
+        lines = ["Expense Report:", ""]
+        lines.append(f"{'Category':<20} {'Amount':>10}")
+        lines.append("-" * 30)
+        for cat, total in spending.items():
+            lines.append(f"{cat:<20} ${total:>10.2f}")
+        return "\n".join(lines)
+
+    def filter_by_category(self, category):
+        return [e for e in self.expenses if e.get('category') == category]
