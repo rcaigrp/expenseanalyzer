@@ -1,10 +1,10 @@
 {
   "goal": "Analyze spending trends and generate reports.",
   "acceptance_criteria": [
-    "analyzer module exists and can be imported.",
-    "analyze_spending_trends returns a dict of spending by time period.",
-    "generate_report returns a string summary of spending.",
-    "get_top_categories returns a list of top N categories by spending."
+    "analyzer module exists and can be imported",
+    "analyze_spending_trends function returns trend data",
+    "generate_report function returns a formatted string summary",
+    "filter_by_date_range returns expenses within a specific date range"
   ],
   "meeting_budget": 4,
   "meetings_held": 0,
